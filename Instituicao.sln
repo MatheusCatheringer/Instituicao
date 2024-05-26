@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academico", "Academico\Academico\Academico.csproj", "{90CD44B0-BD1B-41B1-A2C0-B17BE21A7972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academico.Client", "Academico\Academico.Client\Academico.Client.csproj", "{47AD8564-BDAA-434B-B5AC-E696841F751B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90CD44B0-BD1B-41B1-A2C0-B17BE21A7972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CD44B0-BD1B-41B1-A2C0-B17BE21A7972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CD44B0-BD1B-41B1-A2C0-B17BE21A7972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CD44B0-BD1B-41B1-A2C0-B17BE21A7972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47AD8564-BDAA-434B-B5AC-E696841F751B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47AD8564-BDAA-434B-B5AC-E696841F751B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47AD8564-BDAA-434B-B5AC-E696841F751B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47AD8564-BDAA-434B-B5AC-E696841F751B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89BE39C9-94DE-4817-873E-A95B54339693}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿@page "/instituicaos"
+@using Microsoft.AspNetCore.Components.QuickGrid
+@inject Academico.Data.ApplicationDbContext DB
+@using Academico.Data
+
+<PageTitle>Index</PageTitle>
+<div class="container mt-4">
+    <h1 class="text-center">Lista de instituições</h1>
+   <p>
+
+   </p>
+    <p class="text-center">
+        <a class="btn btn-primary" href="instituicaos/create">Create New</a>
+    </p>
+
+    <QuickGrid Class="table table-striped" Items="DB.Inst">
+        <PropertyColumn Property="instituicao => instituicao.Nome" Title="Nome" />
+        <PropertyColumn Property="instituicao => instituicao.Endereço" Title="Endereço" />
+
+        <TemplateColumn Context="instituicao">
+            <a class="btn btn-sm btn-secondary" href="@($"instituicaos/edit?id={instituicao.Id}")">Edit</a>
+            <a class="btn btn-sm btn-info" href="@($"instituicaos/details?id={instituicao.Id}")">Details</a>
+            <a class="btn btn-sm btn-danger" href="@($"instituicaos/delete?id={instituicao.Id}")">Delete</a>
+        </TemplateColumn>
+    </QuickGrid>
+</div>

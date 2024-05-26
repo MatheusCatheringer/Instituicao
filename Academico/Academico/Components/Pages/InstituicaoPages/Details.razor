@@ -1,0 +1,47 @@
+﻿@page "/instituicaos/details"
+@inject Academico.Data.ApplicationDbContext DB
+@using Academico.Data
+@inject NavigationManager NavigationManager
+@using Microsoft.EntityFrameworkCore
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Instituição</h4>
+    <hr />
+    @if (instituicao is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nome</dt>
+            <dd class="col-sm-10">@instituicao.Nome</dd>
+            <dt class="col-sm-2">Endereço</dt>
+            <dd class="col-sm-10">@instituicao.Endereço</dd>
+        </dl>
+        <div>
+            <a href="@($"/instituicaos/edit?id={instituicao.Id}")">Edit</a> |
+            <a href="@($"/instituicaos")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    Instituicao? instituicao;
+
+    [SupplyParameterFromQuery]
+    public long Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        instituicao = await DB.Inst.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (instituicao is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}
